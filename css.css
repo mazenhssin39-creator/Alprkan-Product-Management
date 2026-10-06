@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(33, 33, 33);
+    color: white;
+    font-family: system-ui;
+}
+
+.curds {
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 0 30px;
+}
+
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+}
+
+.head h2 {
+    font-size: 28px;
+}
+
+.head p {
+    font-size: 16px;
+    color: #aaa;
+}
+
+input {
+    width: 100%;
+    height: 38px;
+    outline: none;
+    border: none;
+    background: #111;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: white;
+    font-size: 14px;
+    transition: .3s;
+}
+
+input:focus {
+    background: #000;
+    transform: scale(1.02);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.price input {
+    width: 20%;
+}
+
+#total {
+    min-width: 90px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2, 82, 82);
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+#total::before {
+    content: "Total: ";
+}
+
+button {
+    width: 100%;
+    min-height: 38px;
+    border: none;
+    cursor: pointer;
+    background: rgb(94, 68, 1);
+    color: white;
+    border-radius: 20px;
+    transition: .5s;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+button:hover {
+    background: rgb(116, 84, 2);
+    letter-spacing: 1px;
+}
+
+.search {
+    margin-top: 20px;
+}
+
+.btnsearch {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btnsearch button {
+    width: 50%;
+}
+
+#deleteAll {
+    margin: 20px 0;
+}
+
+#deleteAll button {
+    background: #791414;
+}
+
+#deleteAll button:hover {
+    background: #a51b1b;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    min-width: 900px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th {
+    text-transform: uppercase;
+    background: #111;
+}
+
+th,
+td {
+    padding: 7px;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+}
+
+td button {
+    min-width: 80px;
+}
+
+#update {
+    background: #075f75;
+}
+
+#update:hover {
+    background: #087d99;
+}
+
+#delete {
+    background: #791414;
+}
+
+#delete:hover {
+    background: #a51b1b;
+}
+
+@media (max-width: 1200px) {
+
+    .curds {
+        width: 90%;
+    }
+
+    .head h2 {
+        font-size: 26px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .curds {
+        width: 94%;
+    }
+
+    .head h2 {
+        font-size: 24px;
+    }
+
+    .head p {
+        font-size: 14px;
+    }
+
+    input {
+        height: 40px;
+    }
+
+    input:focus {
+        transform: none;
+    }
+
+    .price {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .price input {
+        width: 100%;
+    }
+
+    #total {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .btnsearch {
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .curds {
+        width: 94%;
+    }
+
+    .head {
+        margin-bottom: 15px;
+    }
+
+    .head h2 {
+        font-size: 21px;
+    }
+
+    .head p {
+        font-size: 13px;
+    }
+
+    input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .price {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btnsearch {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .btnsearch button {
+        width: 100%;
+    }
+
+    button {
+        min-height: 40px;
+    }
+
+    table {
+        min-width: 900px;
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .curds {
+        width: 96%;
+    }
+
+    .head h2 {
+        font-size: 19px;
+    }
+
+    .price {
+        grid-template-columns: 1fr;
+    }
+
+    #total {
+        width: 100%;
+    }
+
+}
+.money-stats {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.money-box {
+    background: #111;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}
+
+.money-box span {
+    display: block;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.money-box strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+.category-totals {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 10px;
+}
+
+.category-box {
+    background: rgb(2, 82, 82);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.category-box span {
+    display: block;
+    font-size: 14px;
+    color: #ddd;
+    text-transform: capitalize;
+}
+
+.category-box strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+@media (max-width: 480px) {
+
+    .money-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .category-totals {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
